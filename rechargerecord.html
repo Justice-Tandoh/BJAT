@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funding Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0a0a0a;
+            color: white;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background-color: #1a1a1a;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .transaction-card {
+            background-color: #2e214f;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .transaction-card .details {
+            text-align: left;
+        }
+        .transaction-card .details h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        .transaction-card .details p {
+            font-size: 14px;
+            color: #c0c0c0;
+        }
+        .transaction-card .amount {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .amount.negative {
+            color: #ff4d4d; /* Red for negative amounts */
+        }
+        .amount.positive {
+            color: #8ff75c; /* Green for positive amounts */
+        }
+        .back-button {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        .back-button a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="container">
+                <!-- Back button -->
+                <div class="back-button">
+                    <a href="javascript:history.back()">←</a>
+                </div>
+                <h2>Funding Details</h2>
+
+        <!-- First transaction card -->
+        <div class="transaction-card">
+            <div class="details">
+                <h3>Pay order</h3>
+                <p>29/08/2024</p>
+            </div>
+            <div class="amount negative">-100.00</div>
+        </div>
+
+        <!-- Second transaction card -->
+        <div class="transaction-card">
+            <div class="details">
+                <h3>Deposit</h3>
+                <p>29/08/2024</p>
+            </div>
+            <div class="amount positive">+100.00</div>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1c1c1c;
+            color: white;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            margin-bottom: 60px; /* Space for the bottom navigation */
+            text-align: center; /* Center align content */
+        }
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        /* Navigation Buttons */
+        .nav-buttons {
+            display: flex;
+            justify-content: center; /* Center buttons */
+            gap: 20px; /* Space between buttons */
+            margin-bottom: 40px; /* Space below buttons */
+        }
+        .nav-button {
+            background-color: #000; /* Black background */
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 16px;
+            color: white;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.3s;
+        }
+        .nav-button.active {
+            background: linear-gradient(90deg, rgba(98,0,234,1) 0%, rgba(0,212,255,1) 100%);
+            transform: scale(1.05); /* Slightly grow on active */
+        }
+        .nav-button:not(.active):hover {
+            background: rgba(255, 255, 255, 0.1); /* Light background on hover */
+        }
+        /* Product Cards */
+        .card {
+            background:  linear-gradient(90deg, rgba(98,0,234,1) 0%, rgba(0,212,255,1) 100%);;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: scale(1.02); /* Slightly grow on hover */
+        }
+        .card h2 {
+            margin: 0 0 10px;
+        }
+        /* Bottom Navigation */
+        .bottom-nav {
+            margin-top: 40px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #1c1c1c;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            border-top: 1px solid #333;
+        }
+        .nav-item {
+            text-align: center;
+            color: white;
+        }
+        .nav-item img {
+            width: 25px;
+            height: 25px;
+        }
+        .nav-item p {
+            font-size: 12px;
+        }
+        .nav-item.active img {
+            filter: brightness(2);
+        }
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Navigation Buttons -->
+        <div class="nav-buttons">
+            <button class="nav-button active" id="all-button" onclick="showAll()">All</button>
+            <button class="nav-button" id="my-button" onclick="showMy()">My</button>
+        </div>
+
+        <!-- Product Cards -->
+        <div id="product-list">
+            <div class="card" data-purchased="true">
+                <h2>Product Type P-1</h2>
+                <p>Price: 100.00 GHS</p>
+                <p>Return Rate: 134.0%</p>
+                <p>Day Income: 4.60 GHS</p>
+                <p>Total Income: 184.00 GHS</p>
+                <p>Cycles: 40</p>
+            </div>
+            <div class="card" data-purchased="false">
+                <h2>Product Type P-3</h2>
+                <p>Price: 300.00 GHS</p>
+                <p>Return Rate: 192.0%</p>
+                <p>Day Income: 14.40 GHS</p>
+                <p>Total Income: 576.00 GHS</p>
+                <p>Cycles: 40</p>
+            </div>
+            <div class="card" data-purchased="true">
+                <h2>Product Type P-10</h2>
+                <p>Price: 1000.00 GHS</p>
+                <p>Return Rate: 200.0%</p>
+                <p>Day Income: 50.00 GHS</p>
+                <p>Total Income: 2000.00 GHS</p>
+                <p>Cycles: 40</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bottom Navigation -->
+    <div class="bottom-nav">
+       <a href="index.html"> 
+           <div class="nav-item">
+               <img src="Screenshot 2024-07-21 141903.png" alt="Home">
+               <p>Home</p>
+           </div>
+       </a>
+       <a href="product.html">   
+           <div class="nav-item">
+               <img src="Screenshot 2024-08-14 161435.png" alt="Product">
+               <p style="color: violet;">Product</p>
+           </div>
+       </a>
+       <a href="wallet.html">
+           <div class="nav-item">
+               <img src="Screenshot 2024-09-01 142658.png" alt="Wallet">
+               <p>Wallet</p>
+           </div>
+       </a>
+       <a href="my.html">
+           <div class="nav-item">
+               <img src="Screenshot 2024-09-01 143825.png" alt="My">
+               <p>My</p>
+           </div>
+       </a>
+    </div>
+
+    <script>
+        // Show all products by default
+        function showAll() {
+            document.getElementById('all-button').classList.add('active');
+            document.getElementById('my-button').classList.remove('active');
+            
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                card.style.display = 'block'; // Show all products
+            });
+        }
+
+        // Show only purchased products
+        function showMy() {
+            document.getElementById('my-button').classList.add('active');
+            document.getElementById('all-button').classList.remove('active');
+            
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                const purchased = card.getAttribute('data-purchased') === 'true';
+                card.style.display = purchased ? 'block' : 'none'; // Show only purchased products
+            });
+        }
+
+        // Show all products on initial load
+        showAll();
+    </script>
+
+</body>
+</html>

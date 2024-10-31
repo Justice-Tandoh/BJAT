@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1c1c1c;
+            color: white;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            padding-bottom: 80px;  /* Added padding at the bottom */
+        }
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .menu-icon {
+            cursor: pointer;
+            position: relative;
+        }
+        /* Dropdown */
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: #2d2d2d;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            z-index: 1;
+        }
+        .dropdown a {
+            display: block;
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+        }
+        .dropdown a:hover {
+            background-color: #6200ea;
+        }
+        /* Wallet Info */
+        .wallet-info {
+            background: linear-gradient(90deg, rgba(98,0,234,1) 0%, rgba(0,212,255,1) 100%);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+        .wallet-info h2 {
+            margin: 0;
+        }
+        .wallet-info button {
+            margin: 5px;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .wallet-info button:hover {
+            background-color: #6200ea;
+        }
+
+        /* Referral Section */
+        .referral-section {
+            margin-top: 20px;
+            text-align: center;
+            background: linear-gradient(90deg, rgba(98,0,234,1) 0%, rgba(0,212,255,1) 100%);;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 40px; /* Added margin to push the section up */
+        }
+
+       /* Bottom Navigation */
+       .bottom-nav {
+            margin-top: 40px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #1c1c1c;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            border-top: 1px solid #333;
+        }
+        .nav-item {
+            text-align: center;
+            color: white;
+        }
+        .nav-item img {
+            width: 25px;
+            height: 25px;
+        }
+        .nav-item p {
+            font-size: 12px;
+        }
+        .nav-item.active img {
+            filter: brightness(2);
+        }
+        .eye-button
+        {
+            background-color: transparent;
+        }
+        .nav-item a{
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <div class="header">
+            <h1>Wallet</h1>
+            <div class="menu-icon" onclick="toggleDropdown(event)">
+                <span>⋮</span>
+                <div class="dropdown" id="dropdown-menu">
+                    <a href="rechargerecord.html">Recharge Record</a>
+                    <a href="withdrawrecord.html">Withdrawal Record</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Wallet Info -->
+        <div class="wallet-info" style="text-align: left;">
+            <p>Balance: <span class="sensitive" data-value="0.00 GHS">******</span></p>
+            <p>ID: <span>0591627272</span> <button class="eye-button" onclick="toggleVisibility()">👁️</button></p>
+            <div style="text-align: center;" ><button><a href="recharge.html" style="color: black; text-decoration: none;">Recharge</a></button>            
+                <button><a href="withdraw.html" style="color: black; text-decoration: none;">Withdraw</a></button></div> 
+            </div>
+
+        <div class="summary">
+            <p>Total Assets: <span class="sensitive" data-value="1000.00 GHS">******</span></p>
+            <p>Today's Income: <span class="sensitive" data-value="150.00 GHS">******</span></p>
+            <p>Total Income: <span class="sensitive" data-value="5000.00 GHS">******</span></p>
+            <p>Total Withdrawal: <span class="sensitive" data-value="200.00 GHS">******</span></p>
+            <p>Total Recharge: <span class="sensitive" data-value="800.00 GHS">******</span></p>
+            <p>Power Value: <span class="sensitive" data-value="100">******</span></p>
+        </div>
+
+        <!-- Referral Section -->
+        <div class="referral-section">
+            <h3>Referral rewards</h3>
+            <p>Share this job with your friends and earn higher income.</p>
+            <a href="refer.html"><button style="background-color: white; color: black; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Share</button>
+        </a></div>
+
+    </div>
+
+    <!-- Bottom Navigation -->
+    <div class="bottom-nav">
+        <div class="nav-item">
+<a href="index.html">            <img src="Screenshot 2024-09-01 143858.png" alt="Home">
+            <p>Home</p>
+   </a>     </div>
+        <div class="nav-item">
+    <a href="product.html">        <img src="Screenshot 2024-10-09 205520.png" alt="Product">
+            <p>Product</p>
+      </a>  </div>
+        <div class="nav-item active">
+          <a href="wallet.html">  <img src="Screenshot 2024-10-09 204924.png" alt="Wallet">
+            <p style="color: violet;">Wallet</p>
+        </a></div>
+        <div class="nav-item">
+      <a href="my.html">      <img src="Screenshot 2024-10-11 093137.png" alt="My">
+            <p>My</p>
+      </a>  </div>
+    </div>
+
+    <script>
+        function toggleDropdown(event) {
+            event.stopPropagation(); // Prevent event bubbling
+            const dropdown = document.getElementById('dropdown-menu');
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        }
+
+        // Close dropdown if clicked outside
+        document.addEventListener('click', function() {
+            const dropdown = document.getElementById('dropdown-menu');
+            dropdown.style.display = 'none';
+        });
+
+        function toggleVisibility() {
+            const sensitiveElements = document.querySelectorAll('.sensitive');
+            sensitiveElements.forEach(span => {
+                if (span.textContent.includes('****')) {
+                    span.textContent = span.getAttribute('data-value');
+                } else {
+                    span.textContent = '******';
+                }
+                
+            });
+        }
+    </script>
+
+</body>
+</html>

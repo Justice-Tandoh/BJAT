@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Service</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1c1c1c;
+            color: white;
+        }
+        .header {
+            background: linear-gradient(90deg, rgba(98,0,234,1) 0%, rgba(0,212,255,1) 100%);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+        .header img {
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        .service-info {
+            background-color: #6200ea;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .service-info h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .service-info p {
+            color: white;
+            font-size: 16px;
+        }
+        .telegram-section {
+            background: linear-gradient(90deg, rgba(98,0,234,1) 0%, rgba(0,212,255,1) 100%);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;}
+        .telegram-section img {
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        .telegram-section p {
+            margin: 0;
+            font-size: 18px;
+        }
+        .telegram-section .cta {
+            margin-top: 15px;
+            font-size: 16px;
+            color: white;
+            background-color: #4B44D3;
+            padding: 10px 20px;
+            border-radius: 20px;
+            display: inline-block;
+            text-decoration: none;
+        }
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #f4f4f4;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+        }
+        .bottom-nav a {
+            text-decoration: none;
+            color: #555;
+            font-size: 14px;
+            text-align: center;
+        }
+        .bottom-nav a img {
+            width: 25px;
+            height: 25px;
+            display: block;
+            margin: auto;
+        }
+               /* Bottom Navigation */
+       .bottom-nav {
+            margin-top: 40px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #1c1c1c;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            border-top: 1px solid #333;
+        }
+        .nav-item {
+            text-align: center;
+            color: white;
+        }
+        .nav-item img {
+            width: 25px;
+            height: 25px;
+        }
+        .nav-item p {
+            font-size: 12px;
+        }
+        .nav-item.active img {
+            filter: brightness(2);
+        }
+        .nav-item p {
+            font-size: 12px;
+        }
+        .back-button {
+            color: #ffffff;
+            font-size: 16px;
+            margin-bottom: 20px;
+            display: block;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="service-info">
+        <a href="javascript:history.back()" class="back-button" style="text-decoration: none;">&larr;</a>
+        <h1>Customer Service</h1>
+        <p>Reach us anytime between 8:00 AM and 8:00 PM</p>
+    </div>
+
+    <div class="header" style="margin-bottom: 10px;">
+        <img src="whatsapp-icon.png" alt="WhatsApp" width="30" height="30">
+        Hi, I'm exclusive customer service
+        <p style="font-size: 14px;">Service hours: 8:00 - 20:00</p>
+    </div>
+
+    <div class="telegram-section">
+        <img src="telegram-icon.png" alt="Telegram" width="40" height="40">
+        <p>Telegraph Service</p>
+        <a href="#" class="cta">Chat us on Telegram</a>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <div class="bottom-nav">
+        <div class="nav-item">
+<a href="index.html">            <img src="Screenshot 2024-09-01 143858.png" alt="Home">
+            <p>Home</p>
+   </a>     </div>
+        <div class="nav-item">
+    <a href="product.html">        <img src="Screenshot 2024-10-09 205520.png" alt="Product">
+            <p>Product</p>
+      </a>  </div>
+        <div class="nav-item">
+          <a href="wallet.html">  <img src="Screenshot 2024-10-09 204924.png" alt="Wallet">
+            <p>Wallet</p>
+        </a></div>
+        <div class="nav-item active">
+      <a href="my.html">      <img src="Screenshot 2024-10-11 093137.png" alt="My">
+            <p style="color: violet;">My</p>
+      </a>  </div>
+    </div>
+
+</body>
+</html>

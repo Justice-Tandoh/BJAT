@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: white;
+        }
+        /* Container for Navigation */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #000;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            border-top: 1px solid #333;
+            z-index: 10;
+        }
+        /* Wallet Info */
+        .wallet-info {
+            background: linear-gradient(90deg, rgba(98,0,234,1) 0%, rgba(0,212,255,1) 100%);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+        .wallet-info h2 {
+            margin: 0;
+        }
+        .wallet-info button {
+            margin: 5px;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        /* Bottom Navigation */
+        .bottom-nav {
+            margin-top: 40px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #1c1c1c;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            border-top: 1px solid #333;
+        }
+        .nav-item {
+            text-align: center;
+            color: white;
+        }
+        .nav-item img {
+            width: 25px;
+            height: 25px;
+        }
+        .nav-item p {
+            font-size: 12px;
+        }
+        .nav-item.active img {
+            filter: brightness(2);
+        }
+        /* My page list section */
+        .my-section {
+            padding: 20px;
+            background-color: #111;
+        }
+        .my-section h2 {
+            margin: 0;
+            color: #fff;
+        }
+        .my-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .my-section li {
+            padding: 10px 0;
+            border-bottom: 1px solid #333;
+            display: flex;
+            justify-content: space-between;
+            color: #fff;
+        }
+        .my-section li:hover {
+            background-color: #333;
+            cursor: pointer;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- My Section Content -->
+    <div class="my-section">
+        <h2>My</h2>
+        <div class="wallet-info" style="text-align: left;">
+            <p>Balance: <span class="sensitive" data-value="0.00 GHS">******</span></p>
+            <p>ID: <span>0591627272</span> <button class="eye-button" onclick="toggleVisibility()" style="background-color: transparent;">👁️</button></p>
+            <div style="text-align: center;">
+                <a href="recharge.html"><button>Recharge</button></a>
+                <a href="withdraw.html"><button>Withdraw</button></a>
+            </div> 
+        </div>
+        <ul style="padding: 20px; margin-bottom: 50px;">
+            <a href="profile.html"><li>Profile <span>></span></li></a>
+            <a href="team.html"><li>My Team <span>></span></li></a>
+            <a href="balancerecord.html"><li>Balance Record <span>></span></li></a>
+            <a href="withdrawrecord.html"><li>Withdrawal Record <span>></span></li></a>
+            <a href="rechargerecord.html"><li>Recharge Record <span>></span></li></a>
+            <a href="service.html"><li>Service <span>></span></li></a>
+            <a href="refer.html"><li>Invite Friends<span>></span></li></a>
+            <a href="aboutus.html"><li>About Us <span>></span></li></a>
+            <li onclick="confirmLogout()" style="cursor: pointer;">Log Out <span>></span></li> <!-- Changed this line -->
+        </ul>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <div class="bottom-nav">
+        <div class="nav-item">
+            <a href="index.html">
+                <img src="Screenshot 2024-09-01 143858.png" alt="Home">
+                <p>Home</p>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="product.html">
+                <img src="Screenshot 2024-10-09 205520.png" alt="Product">
+                <p>Product</p>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="wallet.html">
+                <img src="Screenshot 2024-10-09 204924.png" alt="Wallet">
+                <p>Wallet</p>
+            </a>
+        </div>
+        <div class="nav-item active">
+            <a href="my.html">
+                <img src="Screenshot 2024-10-11 093137.png" alt="My">
+                <p style="color: violet;">My</p>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function toggleVisibility() {
+            const sensitiveElements = document.querySelectorAll('.sensitive');
+            sensitiveElements.forEach(span => {
+                if (span.textContent.includes('****')) {
+                    span.textContent = span.getAttribute('data-value');
+                } else {
+                    span.textContent = '******';
+                }
+            });
+        }
+
+        function confirmLogout() {
+            const confirmLogout = window.confirm("Are you sure you want to logout?");
+            if (confirmLogout) {
+                // Redirect to the logout URL
+                window.location.href = 'index.html'; // Change this to your actual logout page
+            }
+        }
+    </script>
+</body>
+</html>

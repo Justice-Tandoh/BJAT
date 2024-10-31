@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1c1c1c;
+            color: white;
+        }
+        .team-header {
+            background-color: #4a4a4a; /* Dark gray header */
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.2em;
+        }
+        .team-info {
+            background-color: #333; /* Dark gray section */
+            padding: 20px;
+            border-radius: 10px;
+            margin: 10px 15px;
+        }
+        .team-info h3 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+        .team-info p {
+            margin: 5px 0;
+            font-size: 1.1em;
+        }
+        .team-box {
+            background-color: #222;
+            margin: 15px 15px;
+            padding: 10px;
+            border-radius: 10px;
+            color: #fff;
+        }
+        .team-box.lv1 {
+            border-left: 5px solid #6a0dad; /* Purple for Level 1 */
+        }
+        .team-box.lv2 {
+            border-left: 5px solid #e74c3c; /* Red for Level 2 */
+        }
+        .team-box.lv3 {
+            border-left: 5px solid #8e44ad; /* Darker purple for Level 3 */
+        }
+        .team-box .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .team-box .header h4 {
+            margin: 0;
+        }
+        .team-box .header span {
+            font-size: 0.9em;
+        }
+        .team-box p {
+            font-size: 1em;
+            margin: 5px 0;
+        }
+        /* Button styling */
+        .btn-readmore {
+            display: inline-block;
+            padding: 8px 15px;
+            margin-top: 10px;
+            background-color: #6200ea; /* Bright purple for button */
+            border-radius: 5px;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .btn-readmore:hover {
+            background-color: #3f007d;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Team Header -->
+    <div class="team-header" style="display: flex;">     
+    <!-- Back button -->
+            <a href="javascript:history.back()" class="back-button" style="text-decoration: none; margin-right: 50%; color: white;">&larr;</a>
+
+         
+        Team
+    </div>
+
+    <!-- Team Info Section -->
+    <div class="team-info">
+        <h3>Team Size: 889</h3>
+        <p>Total Profit: 17.30 GHS</p>
+    </div>
+
+    <!-- Team Level 1 -->
+    <div class="team-box lv1">
+        <div class="header">
+            <h4>Subordinate Users (Level 1)</h4>
+            <span>LV 1</span>
+        </div>
+        <p>Subordinate: 889</p>
+        <p>Promotion Income: 0.00 GHS</p>
+    </div>
+
+    <!-- Team Level 2 -->
+    <div class="team-box lv2">
+        <div class="header">
+            <h4>Subordinate Users (Level 2)</h4>
+            <span>LV 2</span>
+        </div>
+        <p>Subordinate: 0</p>
+        <p>Promotion Income: 0.00 GHS</p>
+    </div>
+
+    <!-- Team Level 3 -->
+    <div class="team-box lv3">
+        <div class="header">
+            <h4>Subordinate Users (Level 3)</h4>
+            <span>LV 3</span>
+        </div>
+        <p>Subordinate: 0</p>
+        <p>Promotion Income: 0.00 GHS</p>
+    </div>
+
+</body>
+</html>

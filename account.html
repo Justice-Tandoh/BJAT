@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Withdrawal Account</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0a0a0a;
+        }
+        .header {
+            background: linear-gradient(90deg, rgba(98,0,234,1) 0%, rgba(0,212,255,1) 100%);
+            padding: 20px;
+            color: white;
+            text-align: center;
+            font-size: 18px;
+            position: relative;
+        }
+        .header a {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .form-container {
+            padding: 20px;
+            background: linear-gradient(90deg, rgba(98,0,234,1) 0%, rgba(0,212,255,1) 100%);
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: white;
+        }
+        .form-container label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        .form-container input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-container .sms-section {
+            display: flex;
+            justify-content: space-between;
+        }
+        .form-container .sms-section input {
+            width: 65%;
+        }
+        .form-container .sms-section button {
+            width: 30%;
+            padding: 10px;
+            background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(98,0,234,1) 100%);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            margin-bottom: 5px;
+            cursor: pointer;
+        }
+        .form-container button.save {
+            width: 100%;
+            background-color: #4B44D3;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .whatsapp-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+        .whatsapp-icon img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        .back-button {
+            color: #ffffff;
+            font-size: 16px;
+            margin-bottom: 20px;
+            display: block;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <a href="javascript:history.back()" class="back-button" style="text-decoration: none;">&larr;</a>
+        Withdrawal Account
+    </div>
+
+    <div class="form-container">
+        <h2>Withdrawal Details</h2>
+
+        <label for="name">Your Name</label>
+        <input type="text" id="name" value="Benjamin Justice Arthur Tandoh" >
+
+        <div class="combo-box">
+            <label for="bank">Bank Name</label>
+            <select id="options" name="options">
+                <option value="option1">Mtn</option>
+                <option value="option2">Telecel</option>
+                <option value="option3">AirtelTigo</option>
+            </select>
+
+        <label for="account">Account Number</label>
+        <input type="text" id="account" value="0551724867" >
+
+        <label for="phone">Phone Number</label>
+        <input type="text" id="phone" value="+2330597716187" >
+
+        <div class="sms-section">
+            <input type="text" placeholder="SMS Code">
+            <button>Send</button>
+        </div>
+
+        <button class="save">Save</button>
+    </div>
+
+    <div class="whatsapp-icon">
+        <img src="whatsapp-icon.png" alt="WhatsApp Icon">
+    </div>
+
+</body>
+</html>

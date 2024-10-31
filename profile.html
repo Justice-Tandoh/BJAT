@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+        }
+        .header {
+            background: linear-gradient(90deg, rgba(98,0,234,1) 0%, rgba(0,212,255,1) 100%);
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+        .header h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+        .header .info {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 15px;
+        }
+        .header .info .item {
+            font-size: 18px;
+                        font-weight: bold;
+        }
+        .header .info .item span {
+            display: block;
+            font-size: 14px;
+           
+            font-weight: normal;
+        }
+        .header .logo {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .header .logo img {
+            width: 80px;
+        }
+        .account-info {
+            background: linear-gradient(90deg, rgba(98,0,234,1) 0%, rgba(0,212,255,1) 100%);
+            border-radius: 8px;
+            margin: 20px;
+            padding: 20px;
+        }
+        .account-info .option {
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .account-info .option:last-child {
+            border-bottom: none;
+        }
+        .account-info .option span {
+            font-size: 16px;
+        }
+        .account-info .arrow {
+            font-size: 18px;
+            color: white;
+        }
+        .account-info .option a{
+            text-decoration: none;
+            color: white;
+        }
+
+        /* Bottom Navigation */
+       .bottom-nav {
+            margin-top: 40px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #1c1c1c;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            border-top: 1px solid #333;
+        }
+        .nav-item {
+            text-align: center;
+            color: white;
+        }
+        .nav-item img {
+            width: 25px;
+            height: 25px;
+        }
+        .nav-item p {
+            font-size: 12px;
+        }
+        .nav-item.active img {
+            filter: brightness(2);
+        }
+        .nav-item a{
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>+2330597716187</h1>
+        <p>ID: 513312&nbsp;&nbsp;&nbsp;VIP0</p>
+
+        <div class="info">
+            <div class="item">
+                ₵ 14.1
+                <span>Current Balance</span>
+            </div>
+
+            <div class="item">
+                ₵ 0
+                <span>Device Income</span>
+            </div>
+        </div>
+
+        <div class="logo">
+            <img src="https://via.placeholder.com/80x80.png?text=Logo" alt="Logo">
+        </div>
+    </div>
+
+    <div class="account-info">
+        <div class="option">
+            <a href="personal.html"><span>Personal</span>
+            <span class="arrow">&#x25B6;</span></a>
+        </div>
+        <div class="option">
+<a href="account.html">            <span>Account</span>
+            <span class="arrow">&#x25B6;</span>
+        </a></div>
+        <div class="option">
+            <a href="password.html"><span>Password</span>
+            <span class="arrow">&#x25B6;</span></a>
+        </div>
+    </div>
+ <!-- Bottom Navigation -->
+ <div class="bottom-nav">
+    <div class="nav-item">
+<a href="index.html">            <img src="Screenshot 2024-09-01 143858.png" alt="Home">
+        <p>Home</p>
+</a>     </div>
+    <div class="nav-item">
+<a href="product.html">        <img src="Screenshot 2024-10-09 205520.png" alt="Product">
+        <p>Product</p>
+  </a>  </div>
+    <div class="nav-item active">
+      <a href="wallet.html">  <img src="Screenshot 2024-10-09 204924.png" alt="Wallet">
+        <p style="color: violet;">Wallet</p>
+    </a></div>
+    <div class="nav-item">
+  <a href="my.html">      <img src="Screenshot 2024-10-11 093137.png" alt="My">
+        <p>My</p>
+  </a>  </div>
+</div>
+</body>
+</html>
